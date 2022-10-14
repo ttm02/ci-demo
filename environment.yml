@@ -8,3 +8,4 @@ dependencies:
   - pytest
   - hypothesis
   - pip
+  - pytest-cov
