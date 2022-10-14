@@ -1,5 +1,5 @@
 # Automatic tests with Pytest
-
+[![test-power-method](https://github.com/ttm02/ci-demo/actions/workflows/test-power-method.yml/badge.svg)](https://github.com/ttm02/ci-demo/actions/workflows/test-power-method.yml)
 ## What is this example about?
 
 In this example we will execute some automatic tests for Python code implementing the [[power iteration method]](https://en.wikipedia.org/wiki/Power_iteration). This is an iterative algorithm for finding an approximation for the largest (in absolute value) eigenvalue $\lambda_\mathrm{max}$ of a diagonalisable matrix $A$. It also gives an approximate eigenvector $v$ corresponding to the solution of the eigenvalue equation $A v = \lambda_\mathrm{max} v$.
