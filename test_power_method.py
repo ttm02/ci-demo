@@ -14,8 +14,13 @@ from power_method import power_method_iterations
 # lower values for CI
 MAX_ITERATIONS = 100
 MAX_EXAMPLES = 10
+
 RTOL = 1e-2
 
+# one may wanmt to fix random seed for reproducible results
+#np.random.seed(42)
+
+# this helps for debugging
 
 @pytest.mark.parametrize(
     'matrix_file',

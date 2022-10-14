@@ -4,9 +4,6 @@ import numpy as np
 
 
 def power_method_iterations(A, rtol=1e-5, maxit=10000, criterion="eigenvalues"):
-    # fix random seed for reproducible results
-    np.random.seed(42)
-
     b_k = np.random.random(A.shape[0]) + 1j * np.random.random(A.shape[0])
     b_k_old = np.zeros_like(b_k)
 
