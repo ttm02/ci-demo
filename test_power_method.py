@@ -24,7 +24,7 @@ RTOL = 1e-2
 def test_real_symmetric_iter_eigenvalues(matrix_file):
     A = np.loadtxt(matrix_file)
 
-    eval_max_iter, _, _ = power_method_iterations(
+    eval_max_iter, _, iteration_count = power_method_iterations(
         A, maxit=MAX_ITERATIONS, criterion="eigenvalues")
     if iteration_count == MAX_ITERATIONS:
         pytest.skip("Not performed sufficient iterations for satisfying result")
@@ -42,7 +42,7 @@ def test_real_symmetric_iter_eigenvalues(matrix_file):
 def test_real_symmetric_iter_eigenvectors(matrix_file):
     A = np.loadtxt(matrix_file)
 
-    eval_max_iter, _, _ = power_method_iterations(
+    eval_max_iter, _, iteration_count = power_method_iterations(
         A, maxit=MAX_ITERATIONS, criterion="eigenvectors")
     if iteration_count == MAX_ITERATIONS:
         pytest.skip("Not performed sufficient iterations for satisfying result")
@@ -161,7 +161,7 @@ def test_inverse_evec(matrix_file):
     factor = 1
     A = np.loadtxt(matrix_file)
 
-    eval_max_iter, e_vec, _ = power_method_iterations(
+    eval_max_iter, e_vec, iteration_count = power_method_iterations(
         A, maxit=MAX_ITERATIONS, criterion="eigenvalues")
     if iteration_count == MAX_ITERATIONS:
         pytest.skip("Not performed sufficient iterations for satisfying result")
