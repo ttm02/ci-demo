@@ -1,0 +1,21 @@
+name: test-poer-method
+on:
+ push
+
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+# prerequisites
+      - run : |
+              sudo apt-get update && sudo apt-get install -y python
+              pip -r requirements.txt
+# run the tests
+      - name: Run Tests
+        run: |
+              pytest test_power_method.py
+
+
+
