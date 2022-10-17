@@ -91,13 +91,13 @@ $ pytest test_power_method.py # Add -v for more verbose output.
 If you just want to execute the tests for the eigenvalue criterion for aborting the iterations use:
 
 ```shell
-$ pytest -k eigenvalues test_power_method.py
+$ pytest -k 'eigenvalues' test_power_method.py
 ```
 
 The pattern `eigenvalues` will make Pytest select only the test function with a name matching this pattern. Conversely, if you want to limit yourself to the tests for the eigenvector criterion use the `eigenvectors` pattern:
 
 ```shell
-$ pytest -k eigenvectors test_power_method.py
+$ pytest -k 'eigenvectors' test_power_method.py
 ```
 
 
